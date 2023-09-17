@@ -11,7 +11,7 @@ const Pesanan = ({ idPelanggan, setIdPelanggan }) => {
   useEffect(
     () => onSnapshot(
       docRef, (snapshot) => {
-        console.log(snapshot.data());
+        console.log(snapshot);
         setPesananPelanggan(snapshot.data());
       }
     ), []
@@ -88,6 +88,7 @@ const Pesanan = ({ idPelanggan, setIdPelanggan }) => {
           </div>
         )
           : (<div class="relative overflow-x-auto sm:rounded-lg flex flex-col justify-center items-center text-center">
+            <br></br>
             <p> Anda masih belum memesan. Tambahkan item ke cart lalu klik Checkout.
               <br></br>
               <br></br>
